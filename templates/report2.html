@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="main_container col-lg-12">
+        <div class="row report">
+            <div class="col-lg-12 report-info-box">
+                <div class="heading">Your Future Competitors on Map</div>
+            </div>
+            <div class="col-lg-12 report-info-box">
+                <div class="heading">Top Five Competitors</div>
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>Business Name</th>
+                        <th>Distance (kms)</th>
+                        <th>Reviews</th>
+                        <th>Ratings</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>John</td>
+                        <td>Doe</td>
+                        <td>john@example.com
+                        <td>john@example.com</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+            </div>
+            <div class="col-lg-12 report-info-box" style="height: 450px;">
+                <div class="heading">Business Check Ins By Day</div>
+                <div class="bar-chart">
+                    {{ day_div | safe }}
+                </div>
+            </div>
+            <div class="col-lg-12 report-info-box" style="height: 450px;">
+                <div class="heading">Business Check In By Hour</div>
+                <div class="bar-chart">
+                    {{ hour_div | safe }}
+                </div>
+            </div>
+            <div class="col-lg-12 report-info-box">
+                <div class="heading">Positive Keywords In User Reviews</div>
+            </div>
+            <div class="col-lg-12 report-info-box">
+                <div class="heading">Negative Keywords In User Reviews</div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}
+
+
+{% block extraScript %}
+    {{ day_script|safe }}
+    {{ hour_script|safe }}
+    <script src="http://cdn.pydata.org/bokeh/release/bokeh-0.12.5.min.js"></script>
+    <script src="http://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.5.min.js"></script>
+{% endblock %}
