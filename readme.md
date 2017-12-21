@@ -35,7 +35,7 @@ What the users are thinking about a particular business is very important. A bus
 spark-submit --packages anguenot:pyspark-cassandra:0.6.0 server.py
 
 5) On your local for tunnelling
-ssh -L 5432:gateway.sfucloud.ca:5432 iimtiaz@gateway.sfucloud.ca -N
+ssh -L 5432:gateway.sfucloud.ca:5432 rbisla@gateway.sfucloud.ca -N 
 
 6) On your brower you can access the application entering localhost:5432
 
